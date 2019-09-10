@@ -38,6 +38,7 @@ teardown() {
 # for the pie chart for the username data from discovery and velcro.
 @test "bin/create_username_dist.sh generates correct simple output" {
   run bin/create_username_dist.sh "$BATS_TMPDIR"
+  cat "$BATS_TMPDIR"/username_dist.html
   run diff -wbB test/username_dist.html "$BATS_TMPDIR"/username_dist.html
   [ "$status" -eq 0 ]
 }
