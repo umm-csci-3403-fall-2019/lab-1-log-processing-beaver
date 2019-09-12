@@ -9,7 +9,7 @@ dir=$1
 #This goes into the directory.
 cd $dir
 
-#cat grabs the failed login data from every folder. sed then captures the hour and sort organizes the data numerically.
+#cat grabs the failed login data from every folder. sed then captures the hour and sort organizes the data alphabetically.
 #uniq counts the number of occurences for a hour. The last sed adds the appropriate java script lines.
 cat */failed_login_data.txt \
 	| sed -E -n 's/[A-Za-z]* [0-9]* ([0-9]*) [A-Za-z0-9_-]* [0-9.]*/\1/p' \
