@@ -18,3 +18,5 @@ cd $cDir
 #this uses wrap_content.sh to wrap all the other html files stored in faled_login_summary.txt between summary_plot header and footer
 #and save it as failed_login_summary.html
 ./bin/wrap_contents.sh $dir/failed_login_summary.txt  html_components/summary_plots $dir/failed_login_summary.html
+
+rm $dir/failed_login_summary.txt
